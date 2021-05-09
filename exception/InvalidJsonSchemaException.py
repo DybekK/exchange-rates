@@ -1,0 +1,2 @@
+class InvalidJsonSchemaException(Exception):
+    pass
