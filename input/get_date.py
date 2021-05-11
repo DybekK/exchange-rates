@@ -5,7 +5,15 @@ from input.string_to_date import string_to_date
 
 
 def get_date(test_loop_count=None) -> datetime:
-    """Gets value from user about date"""
+    """
+    Gets value from user about date.
+
+    Args:
+         test_loop_count (int): Used for testing purposes to count calls of this method.
+
+    Returns:
+         Datetime object based on user input.
+    """
     loop_count = 0
     while True:
         try:

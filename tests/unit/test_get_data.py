@@ -33,7 +33,7 @@ class Test(TestCase):
 
     @patch("http.client.HTTPConnection")
     @patch("http.client.HTTPResponse")
-    def test_should_throw_exception_when_status_is_4xx(self, mock_conn, mock_res):
+    def test_should_throw_exception_when_status_is_5xx(self, mock_conn, mock_res):
         mock_res.status = 500
         mock_conn.getresponse = MagicMock.return_value = mock_res
 

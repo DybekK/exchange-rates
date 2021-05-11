@@ -6,7 +6,19 @@ from exception.HttpRequestException import HttpRequestException
 
 
 def get_data(date: datetime, currency: str) -> dict:
-    """Makes http_client api call and fetches accurate data"""
+    """
+    Makes http call to external api and gets data based on given datetime and currency.
+
+    Args:
+         date (datetime): Datetime object.
+         currency (str): Currency.
+
+    Raises:
+        HttpRequestException
+
+    Returns:
+         Parsed json response as a dictionary.
+    """
     date_string = date.strftime("%Y-%m-%d")
 
     query = f"/api/exchangerates/rates/a/{currency}/{date_string}/?format=json"

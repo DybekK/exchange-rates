@@ -7,3 +7,4 @@ six==1.16.0
 virtualenv==20.4.6
 virtualenv-clone==0.5.4
 iso4217
+pdoc
