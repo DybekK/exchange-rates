@@ -12,7 +12,6 @@ if __name__ == '__main__':
         try:
             result = get_data(date, currency)
             rates = mapper(result)
-            print(rates)
         except HttpRequestException as error:
             print(f"Http request error, Status: {error.status}, Reason: {error.message}")
             continue

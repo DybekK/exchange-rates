@@ -20,7 +20,7 @@ class Test(TestCase):
             mock_loads.return_value = given
             result = get_data(datetime.datetime.strptime("2021-03-03", self.date_format), "usd")
             self.assertIsInstance(result, dict)
-            self.assertEquals(given, result)
+            self.assertEqual(given, result)
 
     @patch("http.client.HTTPConnection")
     @patch("http.client.HTTPResponse")
